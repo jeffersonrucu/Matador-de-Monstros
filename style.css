@@ -1,0 +1,107 @@
+body {
+    background: #F2994A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+#matador-de-monstros {
+    padding: 46px 0;
+}
+
+.bar-players {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    background-color: rgba(84, 84, 84, 0.21);
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.5);
+}
+
+.align-center {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.life-bar {
+    width: 100%;
+    height: 30px;
+    background-color: #CCC;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.life {
+    height: 30px;
+}
+
+.attack {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+
+.attack button {
+    margin: 0 15px;
+}
+
+.attack-history{
+    display: flex;
+    justify-content: space-around;
+}
+
+.attack-history ul{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    font-size: 20px;
+}
+
+.attack-monstro {
+    background-color: #B93F3F;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: 0.5px solid #CCC;
+}
+
+.attack-player {
+    background-color: #2E959D;
+    padding: 10px 0;
+    border: 0.5px solid #CCC;
+}
+
+#play-game {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+#play-game span {
+    font-size: 30px;
+    position: absolute;
+}
+
+#play-game img {
+    width: 350px;
+    height: 350px;
+}
+
+#result {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    flex-direction: column;
+}
