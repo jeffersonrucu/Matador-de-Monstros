@@ -75,34 +75,43 @@ new Vue ({
         },
 
         special() {
-             // dano minimo e dano máximo
-             var min = 5
-             var max = 11
-             // dano padrão
-             var damageDefauld = Math.random() * (max - min) + min
-             // dano de cada jogador
-             var damagePlayer = Math.round(damageDefauld) + 3
-             var damageMonster = Math.round(damageDefauld) + 2
-             // calculando dano - vida
-             this.lifePlayers(damagePlayer, damageMonster)
+            // dano minimo e dano máximo
+            var min = 5
+            var max = 11
+            // dano padrão
+            var damageDefauld = Math.random() * (max - min) + min
+            // dano de cada jogador
+            var damagePlayer = Math.round(damageDefauld) + 3
+            var damageMonster = Math.round(damageDefauld) + 2
+            // calculando dano - vida
+            this.lifePlayers(damagePlayer, damageMonster)
         },
 
         cure() {
-            var damage = Math.round(Math.random() * (11 - 5) + 5)
-            var moreLife = Math.round(Math.random() * (12 - 3) + 3)
-            this.lifePlayer = this.lifePlayer + moreLife - damage
+            
+            // dano minimo e dano máximo
+            var min = 5
+            var max = 11
+            // dano padrão
+            var damageDefauld = Math.random() * (max - min) + min
+            var CureDefauld = Math.random() * (max - min) + min
+            // dano de cada jogador
+            var damageMonster = Math.round(damageDefauld)
+            var curePlayer = Math.round(CureDefauld)
+            // calculando dano - vida
+            this.lifePlayer = this.lifePlayer - damageMonster + curePlayer
 
+            // vida maxima 100%
             if (this.lifePlayer > 100) {
                 this.lifePlayer = 100
             }
-
-            this.damageCurrentMonster = damage 
-            this.damageCurrentPlayer = moreLife + 3
         },
 
         lifePlayers(damagePlayer, damageMonster) {
             this.lifePlayer = this.lifePlayer - damageMonster
             this.lifeMonster = this.lifeMonster - damagePlayer
+
+            console.log ( damagePlayer, damageMonster )
         },
 
         giveUp() {
