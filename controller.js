@@ -75,12 +75,16 @@ new Vue ({
         },
 
         special() {
-            var damage =  Math.round(Math.random() * (11 - 5) + 5)
-            this.lifePlayer = this.lifePlayer  - damage - 1
-            this.lifeMonster = this.lifeMonster - damage - 3
-
-            this.damageCurrentMonster = damage + 1
-            this.damageCurrentPlayer = damage + 3
+             // dano minimo e dano máximo
+             var min = 5
+             var max = 11
+             // dano padrão
+             var damageDefauld = Math.random() * (max - min) + min
+             // dano de cada jogador
+             var damagePlayer = Math.round(damageDefauld) + 3
+             var damageMonster = Math.round(damageDefauld) + 2
+             // calculando dano - vida
+             this.lifePlayers(damagePlayer, damageMonster)
         },
 
         cure() {
