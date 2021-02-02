@@ -11,11 +11,12 @@ new Vue ({
     },
 
     computed: {
+        //OK
         result() {
             if (this.lifePlayer <= 0) {
                 this.resultGame = true
                 this.lifePlayer = 0
-                return "JOGADOR PERDEU"
+                return "VOCÊ PERDEU"
             } else if (this.lifeMonster <= 0) {
                 this.resultGame = true
                 this.lifeMonster = 0
@@ -23,6 +24,7 @@ new Vue ({
             }
         },
 
+        //OK
         colorLifePlayer() {
             if(this.lifePlayer < 40) {
                 return {
@@ -35,6 +37,7 @@ new Vue ({
             }
         },
 
+        //OK
         colorLifeMonster() {
             
             if(this.lifeMonster < 40) {
