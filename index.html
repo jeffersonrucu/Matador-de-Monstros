@@ -43,11 +43,15 @@
 
                 <div class="attack-history" v-if="play">
                     <ul id="player-history">
-                        <li class="attack-player"> jogador atingiu Monstro com {{ damageCurrentPlayer }}</li>
+                        <li class="attack-player"  v-for="log in logs"> 
+                            {{ log.nameP }} {{ log.typeAttackP }} : {{ log.valueP }}
+                        </li>
                     </ul>
                     
                     <ul id="monster-history">
-                        <li class="attack-monstro"> Monstro atingiu jogador com  {{ damageCurrentMonster }} </li>
+                        <li class="attack-monstro" v-for="log in logs"> 
+                            {{ log.nameM }} {{ log.typeAttackM }} : {{ log.valueM }}
+                        </li>
                     </ul>
                 </div>
 
