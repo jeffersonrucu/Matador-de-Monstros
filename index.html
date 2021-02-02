@@ -18,9 +18,9 @@
                     <div class="align-center ">
                         <h2> Jogador </h2>
                         <div class="life-bar">
-                            <div class="life" :style="[colorLife, {width: lifePlayer + '%'}]"></div>
+                            <div class="life" :style="[colorLifePlayer, {width: lifePlayer + '%'}]"></div>
                         </div>
-                        <p id="life-player"> {{lifePlayer}} % </p>
+                        <p id="life-player"> {{ lifePlayer }} % </p>
                     </div>
 
                     <!------------------------>
@@ -28,7 +28,7 @@
                     <div class="align-center">
                         <h2> Monstros </h2>
                         <div class="life-bar">
-                            <div class="life" :style="[colorLife, {width: lifeMonster + '%'}]"></div>
+                            <div class="life" :style="[colorLifeMonster, {width: lifeMonster + '%'}]"></div>
                         </div>
                         <p id="life-monster"> {{lifeMonster}} % </p>
                     </div>
@@ -43,13 +43,11 @@
 
                 <div class="attack-history" v-if="play">
                     <ul id="player-history">
-                        <li class="attack-player"> jogador atingiu Monstro com  </li>
-                        <li class="attack-player"> jogador atingiu Monstro com  </li>
+                        <li class="attack-player"> jogador atingiu Monstro com {{ damageCurrentPlayer }}</li>
                     </ul>
                     
                     <ul id="monster-history">
-                        <li class="attack-monstro"> Monstro atingiu jogador com  </li>
-                        <li class="attack-monstro"> Monstro atingiu jogador com  </li>
+                        <li class="attack-monstro"> Monstro atingiu jogador com  {{ damageCurrentMonster }} </li>
                     </ul>
                 </div>
 
